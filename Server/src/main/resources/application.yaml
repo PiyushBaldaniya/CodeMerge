@@ -1,0 +1,36 @@
+spring:
+
+  datasource:
+    url: jdbc:postgresql://localhost:5432/CodeMergeDB
+    username: admin
+    password: admin@123
+    driver-class-name: org.postgresql.Driver
+  jpa:
+    hibernate:
+      ddl-auto: update
+    properties:
+      hibernate:
+        dialect: org.hibernate.dialect.PostgreSQLDialect
+  mail:
+    host: smtp.gmail.com
+    port: 587
+    username: kpkhant3435@gmail.com
+    password: kckfmszkmbtewzbr
+    properties:
+      mail:
+        smtp:
+          auth: true
+          starttls:
+            enable: true
+  CodeMerge:
+    app:
+      jwtCookieName: CodeMergejwt
+      jwtSecret: CodeMergeSecretKeynmasnfmansdmfnamnjknasafaffafafafoiaskljflajsdfklajkfwasdfafafafaoiqwiut
+      jwtExpirationMs: 3600000
+
+  bezkoder:
+    app:
+      jwtRefreshExpirationMs: 86400000
+
+server:
+  port: 8080  # You can set the port to any number you want
